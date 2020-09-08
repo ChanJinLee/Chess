@@ -1,0 +1,11 @@
+h1 {font-size:100px; text-align:center;}
+
+#Main_Frame {width:500px; height:500px; border:2px solid black; margin:auto; padding:0px;}
+#Break {width:500px; height:60px;}
+#Start_Frame {margin:0px; padding:0px;}
+#Setting_Frame {margin-top:10px; padding:0px;}
+
+#Title {width:500px; height:100px; margin:20px auto;}
+#Start_Button {font-size: 50px; width:450px; height:100px; margin-left:25px; margin-right:25px; padding: 0px;}
+#Setting_Button {font-size: 25px; width:210px; height:100px; margin-left:25px;margin-right: 25px; padding:0px;}
+#How_Button {font-size: 25px; width:210px; height:100px; padding:0px;}
