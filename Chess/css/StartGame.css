@@ -1,0 +1,8 @@
+tr {margin:0px; padding:0px;}
+td {width:100px; height:100px; margin:0px; padding:0px;}
+
+#Game_Frame {width:800px; height:800px; margin:0px; padding:0px; float:left;}
+#Chess_Board {width:800px; height:800px; margin:0px; padding:0px; background-color:black;}
+
+#Board_Color_1 {background-color:rgb(200,200,200);}
+#Board_Color_2 {background-color:gray;}
