@@ -1,8 +1,78 @@
 tr {margin:0px; padding:0px;}
 td {width:100px; height:100px; margin:0px; padding:0px;}
 
-#Game_Frame {width:800px; height:800px; margin:0px; padding:0px; float:left;}
-#Chess_Board {width:800px; height:800px; margin:0px; padding:0px; background-color:black;}
+#Main_Frame{width:1118px; height:818px; margin:0px; padding:0px; float:left;}
 
+#Game_Frame {width:818px; height:818px; margin:0px; padding:0px; float:left;}
+#Chess_Board {width:800px; height:800px; margin:0px; padding:0px; background-color:black;}
 #Board_Color_1 {background-color:rgb(200,200,200);}
 #Board_Color_2 {background-color:gray;}
+#Piece {width:50px; height:50px;margin:0px;padding:0px;border:0px;}
+
+#Game_Info_Frame {width:300px; height:818px; margin:0px; padding:0px; float:left;}
+#Play_Button {font-size:30px;width:250px; height:50px; margin-left:25px; padding:0px;}
+
+#Position0 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position1 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position2 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position3 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position4 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position5 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position6 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position7 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position8 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position9 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position10 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position11 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position12 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position13 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position14 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position15 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position16 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position17 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position18 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position19 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position20 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position21 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position22 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position23 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position24 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position25 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position26 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position27 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position28 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position29 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position30 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position31 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position32 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position33 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position34 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position35 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position36 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position37 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position38 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position39 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position40 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position41 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position42 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position43 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position44 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position45 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position46 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position47 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position48 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position49 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position50 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position51 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position52 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position53 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position54 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position55 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position56 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position57 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position58 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position59 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position60 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position61 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position62 {width:50px; height:50px; margin:0px; padding:25px;}
+#Position63 {width:50px; height:50px; margin:0px; padding:25px;}
