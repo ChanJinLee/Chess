@@ -133,14 +133,14 @@ function rook(){
       break;
     }
     if(board[selected_position + i] == 0){
-      board[selected_position + i] = 21;
+      board[selected_position + i] = 100;
     }
     else if(board[selected_position + i] >= 1 && board[selected_position + i] <= 6 && (selected_piece == 12 || selected_piece == 15)){
-      board[selected_position + i] += 30;
+      board[selected_position + i] += 20;
       break;
     }
     else if(board[selected_position + i] >= 11 && board[selected_position + i] <= 16 && (selected_piece == 2 || selected_piece == 5)){
-      board[selected_position + i] += 30;
+      board[selected_position + i] += 20;
       break;
     }
     else{
@@ -157,14 +157,14 @@ function rook(){
       break;
     }
     if(board[selected_position - i] == 0){
-      board[selected_position - i] = 21;
+      board[selected_position - i] = 100;
     }
     else if(board[selected_position - i] >= 1 && board[selected_position - i] <= 6 && (selected_piece == 12 || selected_piece == 15)){
-      board[selected_position - i] += 30;
+      board[selected_position - i] += 20;
       break;
     }
     else if(board[selected_position - i] >= 11 && board[selected_position -i] <= 16 && (selected_piece == 2 || selected_piece == 5)){
-      board[selected_position - i] += 30;
+      board[selected_position - i] += 20;
       break;
     }
     else{
@@ -180,14 +180,14 @@ function rook(){
       break;
     }
     if(board[selected_position + i] == 0){
-      board[selected_position + i] = 21;
+      board[selected_position + i] = 100;
     }
     else if(board[selected_position + i] >= 1 && board[selected_position + i] <= 6 && (selected_piece == 12 || selected_piece == 15)){
-      board[selected_position + i] += 30;
+      board[selected_position + i] += 20;
       break;;
     }
     else if(board[selected_position + i] >= 11 && board[selected_position + i] <= 16 && (selected_piece == 2 || selected_piece == 5)){
-      board[selected_position + i] += 30;
+      board[selected_position + i] += 20;
       break;;
     }
     else{
@@ -204,14 +204,14 @@ function rook(){
       break;
     }
     if(board[selected_position - i] == 0){
-      board[selected_position - i] = 21;
+      board[selected_position - i] = 100;
     }
     else if(board[selected_position - i] >= 1 && board[selected_position - i] <= 6 && (selected_piece == 12 || selected_piece == 15)){
-      board[selected_position - i] += 30;
+      board[selected_position - i] += 20;
       break;
     }
     else if(board[selected_position - i] >= 11 && board[selected_position - i] <= 16 && (selected_piece == 2 || selected_piece == 5)){
-      board[selected_position - i] += 30;
+      board[selected_position - i] += 20;
       break;
     }
     else{
