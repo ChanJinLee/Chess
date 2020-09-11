@@ -11,4 +11,4 @@ Main.html
  : <SEttING> button, <HOW TO PLAY> button
 
 Chess.html
- : rook, knight, bishop, queen, king, promotion, castling, checkmate, game information
+ : promotion, castling, checkmate, game information, end game

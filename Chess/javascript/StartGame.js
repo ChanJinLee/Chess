@@ -121,26 +121,30 @@ function white_pawn(){
 }
 
 function rook(){
-  var init_x = selected_position % 8;
-  var init_y = Math.floor(selected_position / 8);
-  var x = init_x;
-  var y = init_y;
+  var init_x = selected_position % 8; // Initial X-coordinate
+  var init_y = Math.floor(selected_position / 8); // Initial Y-coordinate
+  var x = init_x; // X-coordinate
+  var y = init_y; // Y-coordinate
   var i;
 
   i = 1;
-  while(1){
-    if(x == 7){
+  while(1){ // Move right
+    if(x == 7){ // End right
       break;
     }
-    if(board[selected_position + i] == 0){
-      board[selected_position + i] = 100;
+    if(board[selected_position + i] == 0){  // There is no piece in that position.
+      board[selected_position + i] = 100; // Mark at the position
     }
     else if(board[selected_position + i] >= 1 && board[selected_position + i] <= 6 && (selected_piece == 12 || selected_piece == 15)){
-      board[selected_position + i] += 20;
-      break;
+      // Selected piece is white rook or white queen
+      // There is a black piece in the selected position.
+      board[selected_position + i] += 20; // mark on the piece
+      break; // No more movement
     }
     else if(board[selected_position + i] >= 11 && board[selected_position + i] <= 16 && (selected_piece == 2 || selected_piece == 5)){
-      board[selected_position + i] += 20;
+      // Selected piece is black rook or black queen
+      // There is a white piece in the selected position.
+      board[selected_position + i] += 20; // mark on the piece
       break;
     }
     else{
@@ -152,7 +156,7 @@ function rook(){
 
   i = 1;
   x = init_x;
-  while(1){
+  while(1){ // Move left
     if(x == 0){
       break;
     }
@@ -175,7 +179,7 @@ function rook(){
   }
 
   i = 8;
-  while(1){
+  while(1){ // Move down
     if(y == 7){
       break;
     }
@@ -199,7 +203,7 @@ function rook(){
 
   i = 8;
   y = init_y;
-  while(1){
+  while(1){ // Move up
     if(y == 0){
       break;
     }
@@ -223,19 +227,351 @@ function rook(){
 }
 
 function knight(){
+  var init_x = selected_position % 8;
+  var init_y = Math.floor(selected_position / 8);
+  var x = init_x;
+  var y = init_y;
 
+  if(x + 2 <= 7){
+    if(y + 1 <= 7){
+      if(board[selected_position + 10] == 0){
+        board[selected_position + 10] = 100;
+      }
+      else if(board[selected_position + 10] >= 1 && board[selected_position + 10] <= 6 && selected_piece == 13){
+        board[selected_position + 10] += 20;
+      }
+      else if(board[selected_position + 10] >= 11 && board[selected_position + 10] <= 16 && selected_piece == 3){
+        board[selected_position + 10] += 20;
+      }
+    }
+    if(y - 1 >= 0){
+      if(board[selected_position - 6] == 0){
+        board[selected_position - 6] = 100;
+      }
+      else if(board[selected_position - 6] >= 1 && board[selected_position - 6] <= 6 && selected_piece == 13){
+        board[selected_position - 6] += 20;
+      }
+      else if(board[selected_position - 6] >= 11 && board[selected_position - 6] <= 16 && selected_piece == 3){
+        board[selected_position - 6] += 20;
+      }
+    }
+  }
+
+  if(x - 2 >= 0){
+    if(y + 1 <= 7){
+      if(board[selected_position + 6] == 0){
+        board[selected_position + 6] = 100;
+      }
+      else if(board[selected_position + 6] >= 1 && board[selected_position + 6] <= 6 && selected_piece == 13){
+        board[selected_position + 6] += 20;
+      }
+      else if(board[selected_position + 6] >= 11 && board[selected_position + 6] <= 16 && selected_piece == 3){
+        board[selected_position + 6] += 20;
+      }
+    }
+    if(y - 1 >= 0){
+      if(board[selected_position - 10] == 0){
+        board[selected_position - 10] = 100;
+      }
+      else if(board[selected_position - 10] >= 1 && board[selected_position - 10] <= 6 && selected_piece == 13){
+        board[selected_position - 10] += 20;
+      }
+      else if(board[selected_position - 10] >= 11 && board[selected_position - 10] <= 16 && selected_piece == 3){
+        board[selected_position - 10] += 20;
+      }
+    }
+  }
+
+  if(x + 1 <= 7){
+    if(y + 2 <= 7){
+      if(board[selected_position + 17] == 0){
+        board[selected_position + 17] = 100;
+      }
+      else if(board[selected_position + 17] >= 1 && board[selected_position + 17] <= 6 && selected_piece == 13){
+        board[selected_position + 17] += 20;
+      }
+      else if(board[selected_position + 17] >= 11 && board[selected_position + 17] <= 16 && selected_piece == 3){
+        board[selected_position + 17] += 20;
+      }
+    }
+    if(y - 2 >= 0){
+      if(board[selected_position - 15] == 0){
+        board[selected_position - 15] = 100;
+      }
+      else if(board[selected_position - 15] >= 1 && board[selected_position - 15] <= 6 && selected_piece == 13){
+        board[selected_position - 15] += 20;
+      }
+      else if(board[selected_position - 17] >= 11 && board[selected_position - 15] <= 16 && selected_piece == 3){
+        board[selected_position - 15] += 20;
+      }
+    }
+  }
+
+  if(x - 1 >= 0){
+    if(y + 2 <= 7){
+      if(board[selected_position + 15] == 0){
+        board[selected_position + 15] = 100;
+      }
+      else if(board[selected_position + 15] >= 1 && board[selected_position + 15] <= 6 && selected_piece == 13){
+        board[selected_position + 15] += 20;
+      }
+      else if(board[selected_position + 15] >= 11 && board[selected_position + 15] <= 16 && selected_piece == 3){
+        board[selected_position + 15] += 20;
+      }
+    }
+    if(y - 2 >= 0){
+      if(board[selected_position - 17] == 0){
+        board[selected_position - 17] = 100;
+      }
+      else if(board[selected_position - 17] >= 1 && board[selected_position - 17] <= 6 && selected_piece == 13){
+        board[selected_position - 17] += 20;
+      }
+      else if(board[selected_position - 17] >= 11 && board[selected_position - 17] <= 16 && selected_piece == 3){
+        board[selected_position - 17] += 20;
+      }
+    }
+  }
 }
 
 function bishop(){
+  var init_x = selected_position % 8;
+  var init_y = Math.floor(selected_position / 8);
+  var x = init_x;
+  var y = init_y;
+  var i;
 
+  i = 9;
+  while(1){
+    if(x == 7 || y == 7){
+      break;
+    }
+    if(board[selected_position + i] == 14 && selected_piece == 4){
+      break;
+    }
+    else if(board[selected_position + i] == 4 && selected_piece == 14){
+      break;
+    }
+    else if(board[selected_position + i] == 0){
+      board[selected_position + i] = 100;
+    }
+    else if(board[selected_position + i] >= 1 && board[selected_position + i] <= 6 && (selected_piece == 14 || selected_piece == 15)){
+      board[selected_position + i] += 20;
+      break;
+    }
+    else if(board[selected_position + i] >= 11 && board[selected_position + i] <= 16 && (selected_piece == 4 || selected_piece == 5)){
+      board[selected_position + i] += 20;
+      break;
+    }
+    else{
+      break;
+    }
+    x++;
+    y++;
+    i += 9;
+  }
+
+  i = 9;
+  x = init_x;
+  y = init_y;
+  while(1){
+    if(x == 0 || y == 0){
+      break;
+    }
+    if(board[selected_position - i] == 14 && selected_piece == 4){
+      break;
+    }
+    else if(board[selected_position - i] == 4 && selected_piece == 14){
+      break;
+    }
+    else if(board[selected_position - i] == 0){
+      board[selected_position - i] = 100;
+    }
+    else if(board[selected_position - i] >= 1 && board[selected_position - i] <= 6 && (selected_piece == 14 || selected_piece == 15)){
+      board[selected_position - i] += 20;
+      break;
+    }
+    else if(board[selected_position - i] >= 11 && board[selected_position - i] <= 16 && (selected_piece == 4 || selected_piece == 5)){
+      board[selected_position - i] += 20;
+      break;
+    }
+    else{
+      break;
+    }
+    x--;
+    y--;
+    i += 9;
+  }
+
+  i = 7;
+  x = init_x;
+  y = init_y;
+  while(1){
+    if(x == 0 || y == 7){
+      break;
+    }
+    if(board[selected_position + i] == 14 && selected_piece == 4){
+      break;
+    }
+    else if(board[selected_position + i] == 4 && selected_piece == 14){
+      break;
+    }
+    else if(board[selected_position + i] == 0){
+      board[selected_position + i] = 100;
+    }
+    else if(board[selected_position + i] >= 1 && board[selected_position + i] <= 6 && (selected_piece == 14 || selected_piece == 15)){
+      board[selected_position + i] += 20;
+      break;
+    }
+    else if(board[selected_position + i] >= 11 && board[selected_position + i] <= 16 && (selected_piece == 4 || selected_piece == 5)){
+      board[selected_position + i] += 20;
+      break;
+    }
+    else{
+      break;
+    }
+    x--;
+    y++;
+    i += 7;
+  }
+
+  i = 7;
+  x = init_x;
+  y = init_y;
+
+  while(1){
+    if(x == 7 || y == 0){
+      break;
+    }
+    if(board[selected_position - i] == 14 && selected_piece == 4){
+      break;
+    }
+    else if(board[selected_position - i] == 4 && selected_piece == 14){
+      break;
+    }
+    else if(board[selected_position - i] == 0){
+      board[selected_position - i] = 100;
+    }
+    else if(board[selected_position - i] >= 1 && board[selected_position - i] <= 6 && (selected_piece == 14 || selected_piece == 15)){
+      board[selected_position - i] += 20;
+      break;
+    }
+    else if(board[selected_position - i] >= 11 && board[selected_position - i] <= 16 && (selected_piece == 4 || selected_piece == 5)){
+      board[selected_position - i] += 20;
+      break;
+    }
+    else{
+      break;
+    }
+    x++;
+    y--;
+    i += 7;
+  }
 }
 
 function queen(){
-
+  bishop();
+  rook();
 }
 
 function king(){
+  var x = selected_position % 8;
+  var y = Math.floor(selected_position / 8);
 
+  if(x != 7){
+    if(board[selected_position + 1] == 0){
+      board[selected_position + 1] = 100;
+    }
+    else if(board[selected_position + 1] >= 1 && board[selected_position + 1] <= 6 && selected_piece == 16){
+      board[selected_position + 1] += 10;
+    }
+    else if(board[selected_position + 1] >= 11 && board[selected_position + 1] <= 16 && selected_piece == 6){
+      board[selected_position + 1] += 10;
+    }
+  }
+
+  if(x != 0){
+    if(board[selected_position - 1] == 0){
+      board[selected_position - 1] = 100;
+    }
+    else if(board[selected_position - 1] >= 1 && board[selected_position - 1] <= 6 && selected_piece == 16){
+      board[selected_position - 1] += 20;
+    }
+    else if(board[selected_position - 1] >= 11 && board[selected_position - 1] <= 16 && selected_piece == 6){
+      board[selected_position - 1] += 20;
+    }
+  }
+
+  if(y != 7){
+    if(board[selected_position + 8] == 0){
+      board[selected_position + 8] = 100;
+    }
+    else if(board[selected_position + 8] >= 1 && board[selected_position + 8] <= 6 && selected_piece == 16){
+      board[selected_position + 8] += 20;
+    }
+    else if(board[selected_position + 8] >= 11 && board[selected_position + 8] <= 16 && selected_piece == 6){
+      board[selected_position + 8] += 20;
+    }
+  }
+
+  if(y != 0){
+    if(board[selected_position - 8] == 0){
+      board[selected_position - 8] = 100;
+    }
+    else if(board[selected_position - 8] >= 1 && board[selected_position - 8] <= 6 && selected_piece == 16){
+      board[selected_position - 8] += 20;
+    }
+    else if(board[selected_position - 8] >= 11 && board[selected_position - 8] <= 16 && selected_piece == 6){
+      board[selected_position - 8] += 20;
+    }
+  }
+
+  if(x != 7 && y != 7){
+    if(board[selected_position + 9] == 0){
+      board[selected_position + 9] = 100;
+    }
+    else if(board[selected_position + 9] >= 1 && board[selected_position + 9] <= 6 && selected_piece == 16){
+      board[selected_position + 9] += 20;
+    }
+    else if(board[selected_position + 9] >= 11 && board[selected_position + 9] <= 16 && selected_piece == 6){
+      board[selected_position + 9] += 20;
+    }
+  }
+
+  if(x != 0 && y != 0){
+    if(board[selected_position - 9] == 0){
+      board[selected_position - 9] = 100;
+    }
+    else if(board[selected_position - 9] >= 1 && board[selected_position - 9] <= 6 && selected_piece == 16){
+      board[selected_position - 9] += 20;
+    }
+    else if(board[selected_position - 9] >= 11 && board[selected_position - 9] <= 16 && selected_piece == 6){
+      board[selected_position - 9] += 20;
+    }
+  }
+
+  if(x != 0 && y != 7){
+    if(board[selected_position + 7] == 0){
+      board[selected_position + 7] = 100;
+    }
+    else if(board[selected_position + 7] >= 1 && board[selected_position + 7] <= 6 && selected_piece == 16){
+      board[selected_position + 7] += 20;
+    }
+    else if(board[selected_position + 7] >= 11 && board[selected_position + 7] <= 16 && selected_piece == 6){
+      board[selected_position + 7] += 20;
+    }
+  }
+
+  if(x != 7 && y != 0){
+    if(board[selected_position - 7] == 0){
+      board[selected_position - 7] = 100;
+    }
+    else if(board[selected_position - 7] >= 1 && board[selected_position - 7] <= 6 && selected_piece == 16){
+      board[selected_position - 7] += 20;
+    }
+    else if(board[selected_position - 7] >= 11 && board[selected_position - 7] <= 16 && selected_piece == 6){
+      board[selected_position - 7] += 20;
+    }
+  }
 }
 
 function click_position0(){
